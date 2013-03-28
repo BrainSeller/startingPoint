@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<title><txp:page_title /></title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="generator" content="Textpattern CMS">
+		<txp:if_search>
+			<meta name="robots" content="none">
+		<txp:else />
+			<txp:if_category>
+				<meta name="robots" content="noindex, follow, noodp, noydir">
+			<txp:else />
+				<txp:if_author>
+					<meta name="robots" content="noindex, follow, noodp, noydir">
+				<txp:else />
+					<meta name="robots" content="index, follow, noodp, noydir">
+				</txp:if_author>
+			</txp:if_category>
+		</txp:if_search>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		
+		<link rel="stylesheet" type="text/css" href="<txp:site_url />css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="<txp:site_url />css/default.css"/>
+		<link rel="stylesheet" type="text/css" media="print" href="<txp:site_url />css/print.css"/>
+		
+		<txp:feed_link flavor="atom" format="link" label="Atom" />
+		<txp:feed_link flavor="rss" format="link" label="RSS" />
+		<txp:rsd />
+		
+		<txp:if_section name="">
+			<link rel="canonical" href="<txp:site_url />">
+		<txp:else />
+			<txp:if_individual_article>
+				<link rel="canonical" href="<txp:permlink />">
+			<txp:else />
+				<link rel="canonical" href="<txp:section url='1' />">
+			</txp:if_individual_article>
+		</txp:if_section>
+		
+		<link rel="icon" href="<txp:site_url />favicon.png" type="image/x-icon">
+		
+		<!--[if lt IE 9]>
+			<script src="<txp:site_url />js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header>
+			<h1 class="siteTitle"></h1>
+		</header>
+		<nav>
+			<ul>
+				<li></li>
+			</ul>
+		</nav>
+		<article>
+			<section>
+				<txp:if_search>
+				
+					<h1><txp:text item="search_results" /></h1>
+					<txp:output_form form="search_results"/>
+				
+				<txp:else />
+				    
+			    	<section class="intro">
+			    		<txp:article />
+			    	</section>
+				    	
+				</txp:if_search>
+			</section>
+		</article>
+		<footer>
+		
+		</footer>	
+	</body>
+</html>
