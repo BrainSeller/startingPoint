@@ -5,17 +5,17 @@
 		<title><txp:page_title /></title>
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<meta name="generator" content="Textpattern CMS">
+		<meta name="generator" content="Textpattern CMS" />
 		<txp:if_search>
-			<meta name="robots" content="none">
+			<meta name="robots" content="none" />
 		<txp:else />
 			<txp:if_category>
-				<meta name="robots" content="noindex, follow, noodp, noydir">
+				<meta name="robots" content="noindex, follow, noodp, noydir" />
 			<txp:else />
 				<txp:if_author>
-					<meta name="robots" content="noindex, follow, noodp, noydir">
+					<meta name="robots" content="noindex, follow, noodp, noydir" />
 				<txp:else />
-					<meta name="robots" content="index, follow, noodp, noydir">
+					<meta name="robots" content="index, follow, noodp, noydir" />
 				</txp:if_author>
 			</txp:if_category>
 		</txp:if_search>
@@ -31,16 +31,16 @@
 		<txp:rsd />
 		
 		<txp:if_section name="">
-			<link rel="canonical" href="<txp:site_url />">
+			<link rel="canonical" href="<txp:site_url />" />
 		<txp:else />
 			<txp:if_individual_article>
-				<link rel="canonical" href="<txp:permlink />">
+				<link rel="canonical" href="<txp:permlink />" />
 			<txp:else />
-				<link rel="canonical" href="<txp:section url='1' />">
+				<link rel="canonical" href="<txp:section url='1' />" />
 			</txp:if_individual_article>
 		</txp:if_section>
 		
-		<link rel="icon" href="<txp:site_url />favicon.png" type="image/x-icon">
+		<link rel="icon" href="<txp:site_url />favicon.png" type="image/x-icon" />
 		
 		<!--[if lt IE 9]>
 			<script src="<txp:site_url />js/html5shiv.js"></script>
