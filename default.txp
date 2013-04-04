@@ -64,9 +64,7 @@
 				
 				<txp:else />
 				    
-			    	<section class="intro">
-			    		<txp:article />
-			    	</section>
+		    		<txp:article />
 				    	
 				</txp:if_search>
 			</section>
