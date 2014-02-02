@@ -20,7 +20,7 @@
 			</txp:if_category>
 		</txp:if_search>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
 		<link rel="stylesheet" type="text/css" href="<txp:site_url />css/normalize.css"/>
 		<link rel="stylesheet" type="text/css" href="<txp:site_url />css/default.css"/>
