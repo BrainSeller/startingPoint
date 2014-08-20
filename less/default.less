@@ -1,8 +1,8 @@
-/* ------------------------------------- *\
-   * default less template startingpoint
-   * author: Frank Fuchs BrainSellers Mediendesign
-   * @brainseller
-\* ------------------------------------- */
+/**
+  * default less template startingpoint
+  * author: Frank Fuchs BrainSellers Mediendesign
+  * @brainseller
+  */
 
 /* ------------------------------------- *\
             variables
@@ -160,6 +160,35 @@ a {
 
 
 img, canvas, iframe, video, svg { max-width:100%; }
+
+/* ------------------------------------- *\
+            site wide elements
+\* ------------------------------------- */
+
+.button {
+	display: inline-block;
+	padding: 5px 10px;
+	border-radius: 2px;
+	border: 1px solid #bdbdbd;
+	background-color: #link;
+	color: #eee;
+	text-decoration: none;
+	&:hover {
+		background-color: @linkHover;
+	}
+}
+
+.seperator {
+	clear: both;
+	display: block;
+	margin: 1em 0;
+}
+
+/* ------------------------------------- *\
+            sections
+\* ------------------------------------- */
+
+
 
 /* ------------------------------------- *\
             media queries
