@@ -1,29 +1,68 @@
+/* ------------------------------------- *\
+   * default less template startingpoint
+   * author: Frank Fuchs BrainSellers Mediendesign
+   * @brainseller
+\* ------------------------------------- */
+
+/* ------------------------------------- *\
+            variables
+\* ------------------------------------- */
+
+/* ======== colors ======== */
+
 @text: #111;
 @background: #eee;
 @link: #119;
 @linkHover: #33a;
+
+/* ======== sizes ======== */
+
 @baseSize: 16px;
-/* ================ //
-// = CSS3 Helpers = //
-// ================ */
 
-/* Rounded Corners */
+/* ------------------------------------- *\
+            CSS3 Helpers
+\* ------------------------------------- */
+
+/* ======== rounded corners ======== */
+
 .borderRadius(@radius){
-  -moz-border-radius: @radius;
+     -moz-border-radius: @radius;
   -webkit-border-radius: @radius;
-  -o-border-radius: @radius;
-  border-radius: @radius;
+       -o-border-radius: @radius;
+          border-radius: @radius;
 }
 
-/* Box Shadow */
+/* ======== box shadow ======== */
+
 .boxShadow(@shadow) {
-	-moz-box-shadow: @shadow;
+	   -moz-box-shadow: @shadow;
 	-webkit-box-shadow: @shadow;
-	-o-box-shadow: @shadow;
-	box-shadow: @shadow;
+	     -o-box-shadow: @shadow;
+	        box-shadow: @shadow;
 }
 
-/* Top-to-Bottom Gradient */
+/* ======== transition ======== */
+
+.transition(@params){
+     -moz-transition: @params;
+       -o-transition: @params;
+  -webkit-transition: @params;
+      -ms-transition: @params;
+          transition: @params;
+}
+
+/* ======== transform ======== */
+
+.transform(@params){
+     -moz-transform: @params;
+       -o-transform: @params;
+  -webkit-transform: @params;
+      -ms-transform: @params;
+          transform: @params;
+}
+
+/* ======== top-to-bottom gradient ======== */
+
 .gradientV(@start, @end){
   background: (@start + @end) / 2;
   background-image: -moz-linear-gradient(top,  @start, @end);
@@ -36,7 +75,8 @@
   background-image: -ms-linear-gradient(top, @end, @end); // IE10
 }
 
-/* Left-to-Right Gradient */
+/* ======== left-to-right gradient ======== */
+
 .gradientH(@start, @end){
   background: (@start + @end) / 2;
   background-image: -moz-linear-gradient(left,  @start, @end);
@@ -49,7 +89,8 @@
   background-image: -ms-linear-gradient(left, @end, @end);
 }
 
-/* Top-to-Bottom 3 Stop Gradient */
+/* ======== top-to-bottom 3 stop gradient ======== */
+
 .gradientV3(@start, @middle, @middlePos, @end){
   background: (@start + @end) / 2;
   background-image: -moz-linear-gradient(top,  @start, @middle @middlePos * 1%, @end);
@@ -61,7 +102,8 @@
   background-image: linear-gradient(top, @start 0%, @middle @middlePos * 1%, @end 100%);
 }
 
-/* Left-to-Right 3 Stop Gradient */
+/* ======== left-to-right 3 stop gradient ======== */
+
 .gradientH3(@start, @middle, @middlePos, @end){
   background: (@start + @end) / 2;
   background-image: -moz-linear-gradient(left,  @start, @middle @middlePos * 1%, @end);
@@ -73,7 +115,8 @@
   background-image: linear-gradient(left, @start 0%, @middle @middlePos * 1%, @end 100%);
 }
 
-/* Top-to-Bottom 4 Stop Gradient */
+/* ======== top-to-bottom 4 stop gradient ======== */
+
 .gradientV4(@color1, @color2, @position2, @color3, @position3, @color4){
   background: (@color1 + @color4) / 2;
   background-image: -moz-linear-gradient(top,  @color1, @color2 @position2 * 1%, @color3 @position3 * 1%, @color4);
@@ -85,7 +128,8 @@
   background-image: linear-gradient(top, @color1 0%, @color2 @position2 * 1%, @color3 @position3 * 1%, @color4 100%);
 }
 
-/* Left-to-Right 4 Stop Gradient */
+/* ======== left-to-right 4 stop gradient ======== */
+
 .gradientH4(@color1, @color2, @position2, @color3, @position3, @color4){
   background: (@color1 + @color4) / 2;
   background-image: -moz-linear-gradient(left,  @color1, @color2 @position2 * 1%, @color3 @position3 * 1%, @color4);
@@ -97,27 +141,11 @@
   background-image: linear-gradient(left, @color1 0%, @color2 @position2 * 1%, @color3 @position3 * 1%, @color4 100%);
 }
 
+/* ------------------------------------- *\
+            CSS document
+            Basics and typography
+\* ------------------------------------- */
 
-/* Transition */
-.transition(@params){
-  -moz-transition: @params;
-  -o-transition: @params;
-  -webkit-transition: @params;
-  -ms-transition: @params;
-  transition: @params;
-}
-/* Transform */
-.transform(@params){
-  -moz-transform: @params;
-  -o-transform: @params;
-  -webkit-transform: @params;
-  -ms-transform: @params;
-  transform: @params;
-}
-
-/* ================ //
-// ==CSS-Dokument== //
-// ================ */
 body {
 	color: @text;
 	background-color: @background;
@@ -133,11 +161,18 @@ a {
 
 img, canvas, iframe, video, svg { max-width:100%; }
 
-/* screensize */
-@media screen and (max-width: XXXpx) {
+/* ------------------------------------- *\
+            media queries
+\* ------------------------------------- */
+
+@media screen and (min-width: 640px) {
     
 }
-/* retina */
+
+/* ------------------------------------- *\
+            retina
+\* ------------------------------------- */
+
 @media
 (-webkit-min-device-pixel-ratio: 1.5),
 (min-resolution: 144dpi){
