@@ -19,6 +19,24 @@
 
 @baseSize: 16px;
 
+@breakpoint1: 640px;
+@breakpoint2: 480px;
+
+.breakpoint1(@rules){
+  @media screen and (max-width: @breakpoint1) { @rules(); }
+}
+.breakpoint2(@rules){
+  @media screen and (max-width: @breakpoint2) { @rules(); }
+}
+
+/* ------------------------------------- *\
+            retina
+\* ------------------------------------- */
+
+.retina(@rules){
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ @rules(); }
+}
+
 /* ------------------------------------- *\
             CSS3 Helpers
 \* ------------------------------------- */
@@ -188,23 +206,3 @@ img, canvas, iframe, video, svg { max-width:100%; }
             sections
 \* ------------------------------------- */
 
-
-
-/* ------------------------------------- *\
-            media queries
-\* ------------------------------------- */
-
-@media screen and (min-width: 640px) {
-    
-}
-
-/* ------------------------------------- *\
-            retina
-\* ------------------------------------- */
-
-@media
-(-webkit-min-device-pixel-ratio: 1.5),
-(min-resolution: 144dpi){
-    /* Retina-specific stuff here */
-    
-}
