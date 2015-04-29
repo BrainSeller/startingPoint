@@ -2,7 +2,7 @@
   * default less template startingpoint
   * author: Frank Fuchs BrainSellers Mediendesign
   * @brainseller
-  */
+**/
 
 /* ------------------------------------- *\
             variables
@@ -22,6 +22,12 @@
 @breakpoint1: 640px;
 @breakpoint2: 480px;
 
+/* ------------------------------------- *\
+          mixins (CSS3 Helpers)
+\* ------------------------------------- */
+
+/* ========== responsive breakpoint =========== */
+
 .breakpoint1(@rules){
   @media screen and (max-width: @breakpoint1) { @rules(); }
 }
@@ -29,17 +35,11 @@
   @media screen and (max-width: @breakpoint2) { @rules(); }
 }
 
-/* ------------------------------------- *\
-            retina
-\* ------------------------------------- */
+/*  ============= retina ============== */
 
 .retina(@rules){
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ @rules(); }
 }
-
-/* ------------------------------------- *\
-            CSS3 Helpers
-\* ------------------------------------- */
 
 /* ======== rounded corners ======== */
 
@@ -163,6 +163,13 @@
             CSS document
             Basics and typography
 \* ------------------------------------- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
 	color: @text;
