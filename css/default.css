@@ -60,6 +60,7 @@ svg {
 \* ------------------------------------- */
 .button {
   display: inline-block;
+  font-size: 1.125em;
   padding: .4em .8em;
   border-radius: .2em;
   border: 1px solid #bdbdbd;
