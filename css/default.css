@@ -1,0 +1,83 @@
+/**
+  * default less template startingpoint
+  * author: Frank Fuchs BrainSellers Mediendesign
+  * @brainseller http://frankfuchs.net
+**/
+/* ------------------------------------- *\
+            variables
+\* ------------------------------------- */
+/* ======== colors ======== */
+/* ======== sizes ======== */
+/* ------------------------------------- *\
+          mixins (CSS3 Helpers)
+\* ------------------------------------- */
+/* ========== responsive breakpoint =========== */
+/*  ============= retina ============== */
+/* ======== rounded corners ======== */
+/* ======== box shadow ======== */
+/* ======== transition ======== */
+/* ======== transform ======== */
+/* ======== top-to-bottom gradient ======== */
+/* ======== left-to-right gradient ======== */
+/* ======== top-to-bottom 3 stop gradient ======== */
+/* ======== left-to-right 3 stop gradient ======== */
+/* ======== top-to-bottom 4 stop gradient ======== */
+/* ======== left-to-right 4 stop gradient ======== */
+/* ------------------------------------- *\
+            CSS document
+            Basics and typography
+\* ------------------------------------- */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  color: #111111;
+  background-color: #eeeeee;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+a {
+  color: #1111ee;
+}
+a:hover {
+  color: #3333cc;
+}
+img,
+canvas,
+iframe,
+video,
+svg {
+  max-width: 100%;
+}
+/* ------------------------------------- *\
+            site wide elements
+\* ------------------------------------- */
+.button {
+  display: inline-block;
+  padding: .4em .8em;
+  border-radius: .2em;
+  border: 1px solid #bdbdbd;
+  background: #1111ee linear-gradient(rgba(255, 255, 255, 0.4), transparent);
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-shadow: 0 -0.05em 0.05em rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+.button:hover {
+  color: #eee;
+  background-color: #3333cc;
+}
+.seperator {
+  clear: both;
+  display: block;
+  margin: 1em 0;
+}
+/* ------------------------------------- *\
+            sections
+\* ------------------------------------- */
