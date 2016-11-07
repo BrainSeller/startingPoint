@@ -8,18 +8,31 @@
 		<meta name="robots" content="index, follow, noodp, noydir" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
+
 		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 		<link rel="stylesheet" type="text/css" href="css/default.css"/>
 		<link rel="stylesheet" type="text/css" media="print" href="css/print.css"/>
-		
+
 		<!-- 		<link rel="canonical" href="" /> -->
-		
+
 		<link rel="icon" href="favicon.png" type="image/x-icon" />
-		
+
 		<!--[if lt IE 9]>
 			<script src="js/html5shiv.js"></script>
 		<![endif]-->
+		<script type="text/javascript">
+			function loadFont(url){
+				var link = document.createElement('link');
+				link.rel = 'stylesheet';
+				link.href = url;
+				document.head.appendChild(link);
+			}
+			document.body.onload = function() {
+				// after document is loaded, load the font url
+				var url = 'https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:400,400i,700';
+				loadFont(url);
+			}
+		</script>
 	</head>
 	<body>
 		<header>
@@ -42,6 +55,6 @@
 		</article>
 		<footer>
 		  <p>The footer</p>
-		</footer>	
+		</footer>
 	</body>
 </html>

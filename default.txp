@@ -21,15 +21,15 @@
 		</txp:if_search>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
+
 		<link rel="stylesheet" type="text/css" href="<txp:site_url />css/normalize.css"/>
 		<link rel="stylesheet" type="text/css" href="<txp:site_url />css/default.css"/>
 		<link rel="stylesheet" type="text/css" media="print" href="<txp:site_url />css/print.css"/>
-		
+
 		<txp:feed_link flavor="atom" format="link" label="Atom" />
 		<txp:feed_link flavor="rss" format="link" label="RSS" />
 		<txp:rsd />
-		
+
 		<txp:if_section name="">
 			<link rel="canonical" href="<txp:site_url />" />
 		<txp:else />
@@ -39,9 +39,23 @@
 				<link rel="canonical" href="<txp:section url='1' />" />
 			</txp:if_individual_article>
 		</txp:if_section>
-		
+
 		<link rel="icon" href="<txp:site_url />favicon.png" type="image/x-icon" />
-		
+
+		<script type="text/javascript">
+			function loadFont(url){
+				var link = document.createElement('link');
+				link.rel = 'stylesheet';
+				link.href = url;
+				document.head.appendChild(link);
+			}
+			document.body.onload = function() {
+				// after document is loaded, load the font url
+				var url = 'https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:400,400i,700';
+				loadFont(url);
+			}
+		</script>
+
 		<!--[if lt IE 9]>
 			<script src="<txp:site_url />js/html5shiv.js"></script>
 		<![endif]-->
@@ -60,19 +74,19 @@
 		<article>
 			<section>
 				<txp:if_search>
-				
+
 					<h1><txp:text item="search_results" /></h1>
 					<txp:output_form form="search_results"/>
-				
+
 				<txp:else />
-				    
+
 		    		<txp:article />
-				    	
+
 				</txp:if_search>
 			</section>
 		</article>
 		<footer>
-		
+
 		</footer>
 	</body>
 </html>
